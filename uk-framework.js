@@ -68,7 +68,7 @@ function validateCurrentStep() {
     let isValid = true;
 
     if (currentScopeStep === 1) {
-        // Validate step 1
+        // Validate step 1 - Organisation Context
         const companyName = document.getElementById('companyName').value.trim();
         const industry = document.getElementById('industry').value;
         const location = document.getElementById('location').value;
@@ -77,6 +77,206 @@ function validateCurrentStep() {
         if (!companyName) {
             showError('companyName', 'Organisation name is required');
             isValid = false;
+        },
+        challenge: {
+            'legacy-systems': {
+                pros: [
+                    'Modernisation creates competitive advantage and efficiency gains',
+                    'Opportunity to implement modern UK security and compliance standards',
+                    'Reduced technical debt and maintenance costs over time',
+                    'Improved integration capabilities with modern systems',
+                    'Enhanced user experience and productivity'
+                ],
+                cons: [
+                    'Complex data migration with UK GDPR compliance requirements',
+                    'Significant upfront investment and extended timelines',
+                    'Business disruption during transition period',
+                    'Staff retraining and change management challenges',
+                    'Risk of functionality gaps in new system'
+                ],
+                complexity: 9,
+                costRange: '200K-1M+',
+                timeline: '12-78 weeks',
+                riskLevel: 'High',
+                ukConsiderations: [
+                    'Ensure legacy data migration complies with UK GDPR',
+                    'Plan for Brexit-related data sovereignty requirements',
+                    'Consider government cloud-first policies if public sector',
+                    'Address skills shortage for modern technologies',
+                    'Factor in extended testing for business-critical systems'
+                ],
+                recommendations: [
+                    'Conduct comprehensive legacy system audit and data mapping',
+                    'Plan phased modernisation to reduce business risk',
+                    'Implement robust data backup and rollback procedures',
+                    'Invest heavily in change management and user training'
+                ]
+            },
+            'manual-processes': {
+                pros: [
+                    'Clear ROI through reduced manual effort and errors',
+                    'Improved consistency and compliance with automated workflows',
+                    'Enhanced audit trails for UK regulatory requirements',
+                    'Better resource allocation to high-value activities',
+                    'Scalability without proportional staffing increases'
+                ],
+                cons: [
+                    'Initial process documentation and mapping effort required',
+                    'Potential job displacement concerns and staff resistance',
+                    'Complex approval workflows may reduce flexibility',
+                    'Dependency on system availability for business operations',
+                    'Need for exception handling procedures'
+                ],
+                complexity: 6,
+                costRange: '75K-400K',
+                timeline: '8-32 weeks',
+                riskLevel: 'Medium',
+                ukConsiderations: [
+                    'Ensure automated processes comply with UK employment law',
+                    'Consider GDPR implications of automated decision-making',
+                    'Plan for accessibility requirements in digital processes',
+                    'Address potential IR35 implications for process consultants',
+                    'Factor in regional variations in process requirements'
+                ],
+                recommendations: [
+                    'Start with highest-impact, lowest-risk processes',
+                    'Implement comprehensive process monitoring and metrics',
+                    'Plan for gradual rollout with pilot departments',
+                    'Invest in change management and staff retraining programmes'
+                ]
+            },
+            'data-silos': {
+                pros: [
+                    'Unified data view enables better decision-making',
+                    'Improved operational efficiency and reduced duplication',
+                    'Enhanced compliance monitoring and reporting capabilities',
+                    'Better customer experience through integrated information',
+                    'Foundation for advanced analytics and business intelligence'
+                ],
+                cons: [
+                    'Complex data integration and quality challenges',
+                    'Significant technical debt from multiple legacy systems',
+                    'Data governance and ownership conflicts between departments',
+                    'Privacy and security risks during data consolidation',
+                    'Potential performance issues with large-scale integrations'
+                ],
+                complexity: 7,
+                costRange: '150K-600K',
+                timeline: '16-48 weeks',
+                riskLevel: 'Medium-High',
+                ukConsiderations: [
+                    'Implement UK GDPR-compliant data integration practices',
+                    'Plan for data residency and sovereignty requirements',
+                    'Consider cross-border data transfer implications',
+                    'Address sector-specific data sharing restrictions',
+                    'Ensure audit trails meet UK regulatory standards'
+                ],
+                recommendations: [
+                    'Conduct comprehensive data audit and classification',
+                    'Implement master data management practices',
+                    'Plan for data quality improvement initiatives',
+                    'Establish clear data governance and stewardship roles'
+                ]
+            },
+            'compliance-gaps': {
+                pros: [
+                    'Reduced risk of regulatory fines and reputational damage',
+                    'Improved competitive position through compliance leadership',
+                    'Enhanced stakeholder confidence and trust',
+                    'Foundation for international expansion opportunities',
+                    'Better operational risk management and controls'
+                ],
+                cons: [
+                    'Significant investment in compliance tools and processes',
+                    'Ongoing operational overhead for compliance monitoring',
+                    'Potential business process constraints and slower operations',
+                    'Need for specialised compliance expertise and training',
+                    'Regular updates required as regulations evolve'
+                ],
+                complexity: 8,
+                costRange: '100K-500K',
+                timeline: '12-36 weeks',
+                riskLevel: 'Medium',
+                ukConsiderations: [
+                    'Focus on UK GDPR, Cyber Essentials, and sector-specific requirements',
+                    'Consider Brexit impact on existing EU compliance frameworks',
+                    'Plan for evolving UK regulatory landscape post-Brexit',
+                    'Address ICO guidance and enforcement priorities',
+                    'Factor in potential divergence from EU standards'
+                ],
+                recommendations: [
+                    'Conduct comprehensive compliance gap analysis',
+                    'Prioritise high-risk areas and regulatory deadlines',
+                    'Implement automated compliance monitoring where possible',
+                    'Establish ongoing compliance review and update processes'
+                ]
+            },
+            'scalability-issues': {
+                pros: [
+                    'Improved system performance and user experience',
+                    'Ability to support business growth without system constraints',
+                    'Better resource utilisation and cost efficiency',
+                    'Enhanced disaster recovery and business continuity',
+                    'Foundation for innovation and new service offerings'
+                ],
+                cons: [
+                    'Significant infrastructure investment and ongoing costs',
+                    'Complex migration to scalable architecture',
+                    'Potential over-provisioning leading to unnecessary costs',
+                    'Need for new skills and operational procedures',
+                    'Dependency on cloud providers and internet connectivity'
+                ],
+                complexity: 8,
+                costRange: '200K-800K',
+                timeline: '16-52 weeks',
+                riskLevel: 'Medium-High',
+                ukConsiderations: [
+                    'Ensure scalable solutions meet UK data residency requirements',
+                    'Consider government cloud frameworks for public sector',
+                    'Plan for Brexit implications on EU-based cloud services',
+                    'Address Cyber Essentials requirements for cloud deployments',
+                    'Factor in London weighting for cloud infrastructure costs'
+                ],
+                recommendations: [
+                    'Conduct thorough capacity planning and growth projections',
+                    'Implement cloud-native architecture with auto-scaling',
+                    'Plan for comprehensive performance testing and monitoring',
+                    'Establish cost optimisation and resource management practices'
+                ]
+            },
+            'security-concerns': {
+                pros: [
+                    'Enhanced protection against cyber threats and data breaches',
+                    'Improved compliance with UK security standards',
+                    'Better business continuity and disaster recovery capabilities',
+                    'Enhanced stakeholder confidence and competitive advantage',
+                    'Foundation for secure digital transformation initiatives'
+                ],
+                cons: [
+                    'Significant investment in security tools and infrastructure',
+                    'Potential impact on system performance and user experience',
+                    'Need for ongoing security monitoring and incident response',
+                    'Complex integration with existing systems and processes',
+                    'Regular updates required to address evolving threats'
+                ],
+                complexity: 9,
+                costRange: '150K-750K',
+                timeline: '12-48 weeks',
+                riskLevel: 'High',
+                ukConsiderations: [
+                    'Align with NCSC guidance and Cyber Essentials standards',
+                    'Consider sector-specific security requirements (NHS, finance, government)',
+                    'Plan for NIS Directive and critical infrastructure requirements',
+                    'Address supply chain security and vendor risk management',
+                    'Factor in potential government security clearance requirements'
+                ],
+                recommendations: [
+                    'Conduct comprehensive security risk assessment',
+                    'Implement defence-in-depth security architecture',
+                    'Plan for regular penetration testing and vulnerability assessments',
+                    'Establish incident response and business continuity procedures'
+                ]
+            }
         }
         if (!industry) {
             showError('industry', 'Please select an industry');
@@ -91,26 +291,21 @@ function validateCurrentStep() {
             isValid = false;
         }
     } else if (currentScopeStep === 2) {
-        // Validate step 2
-        const projectSelected = scopeData.project;
-        if (!projectSelected) {
-            showError('project', 'Please select a project type');
+        // Validate step 2 - Current State Assessment
+        const challengeSelected = scopeData.challenge;
+        if (!challengeSelected) {
+            showError('challenge', 'Please select your primary technology challenge');
             isValid = false;
         }
     } else if (currentScopeStep === 3) {
-        // Validate step 3
-        const timeline = document.getElementById('timeline').value;
-        const budget = document.getElementById('budget').value;
-
-        if (!timeline) {
-            showError('timeline', 'Please select a timeline');
-            isValid = false;
-        }
-        if (!budget) {
-            showError('budget', 'Please select a budget range');
+        // Validate step 3 - Data & Information Requirements
+        const dataTransfer = document.getElementById('data-transfer').value;
+        if (!dataTransfer) {
+            showError('data-transfer', 'Please specify your international data transfer requirements');
             isValid = false;
         }
     }
+    // Add validation for additional steps as needed
 
     return isValid;
 }
@@ -146,10 +341,8 @@ function showPage(pageId) {
     window.scrollTo(0, 0);
 }
 
-// ===== QUICK SCOPE TOOL FUNCTIONS =====
-
 /**
- * Select an option in the scope tool
+ * Select an option in the scope tool (fallback for non-analysis selections)
  * @param {HTMLElement} element - Clicked element
  * @param {string} type - Type of selection
  * @param {string} value - Selected value
@@ -172,6 +365,756 @@ function selectOption(element, type, value) {
 }
 
 /**
+ * Enhanced selection with decision analysis
+ * @param {HTMLElement} element - Clicked element
+ * @param {string} type - Type of selection
+ * @param {string} value - Selected value
+ */
+function selectOptionWithAnalysis(element, type, value) {
+    // First do the normal selection
+    selectOption(element, type, value);
+    
+    // Then show the analysis
+    showDecisionAnalysis(type, value);
+}
+
+/**
+ * Show decision analysis for a selection
+ * @param {string} type - Type of selection
+ * @param {string} value - Selected value
+ */
+function showDecisionAnalysis(type, value) {
+    const analysisPanel = document.getElementById(`${type}-analysis`);
+    const analysisContent = document.getElementById(`${type}-analysis-content`);
+    
+    if (!analysisPanel || !analysisContent) return;
+    
+    const analysis = getDecisionAnalysis(type, value);
+    if (!analysis) return;
+    
+    // Build the analysis HTML
+    const analysisHTML = `
+        <div class="pros-cons-grid">
+            <div class="pros-section">
+                <h5>✅ Advantages</h5>
+                <ul>
+                    ${analysis.pros.map(pro => `<li>${pro}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="cons-section">
+                <h5>⚠️ Considerations</h5>
+                <ul>
+                    ${analysis.cons.map(con => `<li>${con}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="impact-summary">
+            <strong>📊 UK Project Impact</strong>
+            <div class="impact-metrics">
+                <div class="impact-metric">
+                    <span class="value">${analysis.complexity}/10</span>
+                    <span class="label">Complexity</span>
+                </div>
+                <div class="impact-metric">
+                    <span class="value">£${analysis.costRange}</span>
+                    <span class="label">Typical Cost</span>
+                </div>
+                <div class="impact-metric">
+                    <span class="value">${analysis.timeline}</span>
+                    <span class="label">Timeline</span>
+                </div>
+                <div class="impact-metric">
+                    <span class="value">${analysis.riskLevel}</span>
+                    <span class="label">Risk Level</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="uk-considerations">
+            <h6>🇬🇧 UK-Specific Considerations</h6>
+            <ul>
+                ${analysis.ukConsiderations.map(consideration => `<li>${consideration}</li>`).join('')}
+            </ul>
+        </div>
+        
+        <div class="recommendations">
+            <h6>💡 Recommended Next Steps</h6>
+            <ul>
+                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+    
+    analysisContent.innerHTML = analysisHTML;
+    analysisPanel.style.display = 'block';
+}
+
+/**
+ * Get decision analysis data for different selections
+ * @param {string} type - Type of selection
+ * @param {string} value - Selected value
+ * @returns {Object} Analysis data
+ */
+function getDecisionAnalysis(type, value) {
+    const analysisData = {
+        project: {
+            'new-app': {
+                pros: [
+                    'Clean architecture with modern UK data protection by design',
+                    'Full control over GDPR compliance implementation',
+                    'Optimised for current UK regulations and standards',
+                    'Scalable foundation for future UK expansion',
+                    'Latest security features for Cyber Essentials compliance'
+                ],
+                cons: [
+                    'Higher initial development costs and longer timeline',
+                    'Requires comprehensive testing and validation',
+                    'No existing user base or feedback to guide development',
+                    'May require additional UK regulatory approvals',
+                    'Full responsibility for all compliance and security aspects'
+                ],
+                complexity: 8,
+                costRange: '150K-500K',
+                timeline: '12-52 weeks',
+                riskLevel: 'Medium-High',
+                ukConsiderations: [
+                    'Must comply with UK GDPR from day one',
+                    'Consider NHS Digital standards if healthcare-related',
+                    'Plan for Cyber Essentials certification requirements',
+                    'Ensure UK data residency if required by sector',
+                    'Factor in London weighting for development team costs'
+                ],
+                recommendations: [
+                    'Conduct detailed requirements gathering with UK compliance focus',
+                    'Plan for iterative development with regular compliance checkpoints',
+                    'Budget for UK-specific testing and certification',
+                    'Consider MVP approach to validate concepts early'
+                ]
+            },
+            'modernisation': {
+                pros: [
+                    'Leverages existing business knowledge and workflows',
+                    'Incremental approach reduces business disruption',
+                    'Maintains data continuity during transition',
+                    'Can address specific UK compliance gaps systematically',
+                    'Users familiar with core functionality'
+                ],
+                cons: [
+                    'Legacy technical debt may limit modernisation scope',
+                    'Complex data migration with UK GDPR considerations',
+                    'Potential integration challenges with existing systems',
+                    'May require supporting old and new systems simultaneously',
+                    'Existing architecture may not support modern UK requirements'
+                ],
+                complexity: 9,
+                costRange: '200K-800K',
+                timeline: '16-78 weeks',
+                riskLevel: 'High',
+                ukConsiderations: [
+                    'Audit existing data for UK GDPR compliance before migration',
+                    'Plan for Brexit-related data sovereignty requirements',
+                    'Assess if legacy system meets current Cyber Essentials standards',
+                    'Consider impact on existing UK regulatory approvals',
+                    'Evaluate need for enhanced encryption and access controls'
+                ],
+                recommendations: [
+                    'Comprehensive legacy system audit and documentation',
+                    'Phased modernisation approach to minimise risk',
+                    'Detailed data mapping and migration planning',
+                    'Parallel running period for safety and validation'
+                ]
+            },
+            'integration': {
+                pros: [
+                    'Connects existing investments and eliminates data silos',
+                    'Improves operational efficiency across departments',
+                    'Enables better decision-making with unified data view',
+                    'Cost-effective way to enhance current capabilities',
+                    'Faster implementation than full system replacement'
+                ],
+                cons: [
+                    'Complex data mapping between different UK systems',
+                    'Dependent on reliability and availability of source systems',
+                    'May expose security vulnerabilities across connected systems',
+                    'Ongoing maintenance complexity with multiple integration points',
+                    'Risk of cascading failures across integrated systems'
+                ],
+                complexity: 6,
+                costRange: '75K-300K',
+                timeline: '8-26 weeks',
+                riskLevel: 'Medium',
+                ukConsiderations: [
+                    'Ensure all integrated systems meet UK data protection standards',
+                    'Plan for cross-system audit trails for compliance',
+                    'Consider data classification and access controls across systems',
+                    'Assess impact on existing UK certifications and approvals',
+                    'Plan for real-time monitoring of data flows for GDPR compliance'
+                ],
+                recommendations: [
+                    'Map all data flows and identify sensitive information',
+                    'Implement robust error handling and monitoring',
+                    'Plan for comprehensive testing of all integration scenarios',
+                    'Document all data transformations for audit purposes'
+                ]
+            },
+            'cloud-migration': {
+                pros: [
+                    'Enhanced scalability and disaster recovery capabilities',
+                    'Reduced on-premises infrastructure maintenance costs',
+                    'Access to advanced UK cloud security features',
+                    'Improved collaboration and remote working capabilities',
+                    'Better alignment with modern UK government cloud-first policies'
+                ],
+                cons: [
+                    'Ongoing subscription costs may exceed current infrastructure spend',
+                    'Dependency on internet connectivity and cloud provider reliability',
+                    'Data sovereignty and Brexit-related compliance complexity',
+                    'Need for staff retraining on cloud technologies',
+                    'Potential vendor lock-in with specific cloud providers'
+                ],
+                complexity: 7,
+                costRange: '100K-400K',
+                timeline: '12-40 weeks',
+                riskLevel: 'Medium',
+                ukConsiderations: [
+                    'Ensure cloud provider meets UK data residency requirements',
+                    'Verify compliance with UK GDPR and data sovereignty rules',
+                    'Consider G-Cloud framework for government sector projects',
+                    'Plan for Cyber Essentials Plus if required',
+                    'Assess Brexit impact on EU data adequacy decisions'
+                ],
+                recommendations: [
+                    'Conduct cloud readiness assessment including compliance review',
+                    'Pilot migration with non-critical systems first',
+                    'Develop comprehensive backup and disaster recovery strategy',
+                    'Plan for hybrid cloud approach if full migration not suitable'
+                ]
+            },
+            'compliance': {
+                pros: [
+                    'Reduces risk of regulatory fines and penalties',
+                    'Improves stakeholder confidence and business reputation',
+                    'Creates foundation for future growth and expansion',
+                    'Enables participation in government and enterprise tenders',
+                    'Demonstrates commitment to data protection and security'
+                ],
+                cons: [
+                    'Significant upfront investment in compliance tools and processes',
+                    'Ongoing operational overhead for compliance monitoring',
+                    'May slow down business processes due to additional controls',
+                    'Requires regular updates as regulations evolve',
+                    'Need for specialised compliance expertise and training'
+                ],
+                complexity: 5,
+                costRange: '50K-200K',
+                timeline: '8-20 weeks',
+                riskLevel: 'Low-Medium',
+                ukConsiderations: [
+                    'Focus on UK GDPR, Data Protection Act 2018, and ICO guidance',
+                    'Consider sector-specific requirements (NHS, finance, government)',
+                    'Plan for Cyber Essentials or Cyber Essentials Plus certification',
+                    'Assess need for ISO 27001 or other relevant standards',
+                    'Ensure compliance supports business operations rather than hindering them'
+                ],
+                recommendations: [
+                    'Start with comprehensive compliance gap analysis',
+                    'Prioritise high-risk areas and quick wins',
+                    'Implement automated compliance monitoring where possible',
+                    'Plan for regular compliance audits and updates'
+                ]
+            },
+            'digital-transformation': {
+                pros: [
+                    'Comprehensive modernisation positions organisation for future',
+                    'Significant competitive advantage through digital capabilities',
+                    'Improved customer experience and operational efficiency',
+                    'Better data-driven decision making across the organisation',
+                    'Attracts top talent and improves employee satisfaction'
+                ],
+                cons: [
+                    'Substantial investment and long-term commitment required',
+                    'High complexity with multiple moving parts and dependencies',
+                    'Significant change management and training requirements',
+                    'Risk of business disruption during transformation period',
+                    'May take considerable time to realise full benefits'
+                ],
+                complexity: 10,
+                costRange: '500K-2M+',
+                timeline: '26-104 weeks',
+                riskLevel: 'High',
+                ukConsiderations: [
+                    'Align with UK Digital Strategy and government digital standards',
+                    'Plan for comprehensive UK regulatory compliance across all systems',
+                    'Consider Brexit implications for international data flows',
+                    'Assess impact on existing UK certifications and approvals',
+                    'Factor in UK skills shortage and need for talent acquisition'
+                ],
+                recommendations: [
+                    'Develop detailed transformation roadmap with clear milestones',
+                    'Establish strong governance and change management processes',
+                    'Plan for extensive stakeholder engagement and communication',
+                    'Consider partnering with experienced UK transformation specialists'
+                ]
+            }
+        },
+        size: {
+            '1-50': {
+                pros: [
+                    'Lower compliance overhead and simplified governance',
+                    'Agile decision-making with direct stakeholder access',
+                    'Cost-effective solutions with basic licensing',
+                    'Faster implementation with fewer approval layers',
+                    'Personal relationships enable easier change management'
+                ],
+                cons: [
+                    'Limited IT resources and technical expertise',
+                    'Higher per-user costs for enterprise features',
+                    'Basic disaster recovery and business continuity',
+                    'Manual processes may not scale with growth',
+                    'Limited bargaining power with vendors'
+                ],
+                complexity: 3,
+                costRange: '25K-150K',
+                timeline: '8-20 weeks',
+                riskLevel: 'Low',
+                ukConsiderations: [
+                    'May qualify for small business support schemes',
+                    'Simplified UK GDPR compliance procedures available',
+                    'Access to government small business digital grants',
+                    'Consider shared services for compliance functions',
+                    'Plan for growth to avoid future system replacement'
+                ],
+                recommendations: [
+                    'Focus on scalable cloud solutions from the start',
+                    'Implement basic but solid security foundations',
+                    'Plan for future growth with flexible licensing',
+                    'Consider managed services to supplement internal capability'
+                ]
+            },
+            '51-250': {
+                pros: [
+                    'Good balance of agility and structure',
+                    'Dedicated IT resources becoming available',
+                    'Access to mid-tier enterprise features',
+                    'Opportunity to implement proper governance',
+                    'Can support more sophisticated business processes'
+                ],
+                cons: [
+                    'Growing compliance complexity and overhead',
+                    'Need for more formal change management processes',
+                    'Outgrowing simple solutions but not ready for enterprise',
+                    'Multiple departments with different requirements',
+                    'Skills gaps in specialist areas'
+                ],
+                complexity: 6,
+                costRange: '75K-400K',
+                timeline: '12-36 weeks',
+                riskLevel: 'Medium',
+                ukConsiderations: [
+                    'Formal UK GDPR compliance programme required',
+                    'Consider Cyber Essentials certification for credibility',
+                    'Department-specific compliance may be needed',
+                    'Plan for data protection officer (DPO) requirements',
+                    'London weighting significant if office in capital'
+                ],
+                recommendations: [
+                    'Implement role-based access control (RBAC)',
+                    'Plan for departmental workflows and approvals',
+                    'Consider hybrid cloud for cost optimisation',
+                    'Invest in staff training and development'
+                ]
+            },
+            '251-1000': {
+                pros: [
+                    'Dedicated IT department with specialist skills',
+                    'Enterprise-grade security and compliance capability',
+                    'Sophisticated business process automation possible',
+                    'Better vendor negotiations and support options',
+                    'Can support complex multi-site operations'
+                ],
+                cons: [
+                    'Significant compliance and governance overhead',
+                    'Complex change management and approval processes',
+                    'Higher licensing costs and infrastructure requirements',
+                    'Integration challenges with multiple legacy systems',
+                    'Need for formal disaster recovery and business continuity'
+                ],
+                complexity: 8,
+                costRange: '200K-1M',
+                timeline: '16-52 weeks',
+                riskLevel: 'Medium-High',
+                ukConsiderations: [
+                    'Mandatory DPO and comprehensive GDPR programme',
+                    'Sector-specific compliance requirements likely',
+                    'Regular audits and compliance monitoring needed',
+                    'May require government security clearances',
+                    'Complex VAT and corporation tax implications'
+                ],
+                recommendations: [
+                    'Implement enterprise governance frameworks',
+                    'Plan for comprehensive security and compliance monitoring',
+                    'Consider federated identity and access management',
+                    'Invest in formal project management and change control'
+                ]
+            },
+            '1000+': {
+                pros: [
+                    'Enterprise-scale resources and expertise available',
+                    'Sophisticated governance and compliance frameworks',
+                    'Global operations and advanced technology capabilities',
+                    'Significant vendor leverage and custom solutions',
+                    'Comprehensive disaster recovery and resilience'
+                ],
+                cons: [
+                    'Complex regulatory landscape and compliance requirements',
+                    'Long approval processes and bureaucratic overhead',
+                    'High implementation costs and extended timelines',
+                    'Legacy system integration complexity',
+                    'Significant change management and training requirements'
+                ],
+                complexity: 10,
+                costRange: '500K-5M+',
+                timeline: '26-104 weeks',
+                riskLevel: 'High',
+                ukConsiderations: [
+                    'Full enterprise GDPR compliance and privacy programme',
+                    'Multiple regulator relationships and reporting',
+                    'International data transfer and sovereignty requirements',
+                    'Large company corporation tax rates apply',
+                    'Potential for parliamentary or regulatory scrutiny'
+                ],
+                recommendations: [
+                    'Establish enterprise architecture and governance boards',
+                    'Implement comprehensive compliance and risk management',
+                    'Plan for extensive stakeholder engagement and communication',
+                    'Consider phased implementation across business units'
+                ]
+            }
+        }
+        // Add more analysis data for other selection types as needed
+    };
+    
+/**
+ * Show industry-specific analysis
+ * @param {string} industry - Selected industry
+ */
+function showIndustryAnalysis(industry) {
+    if (!industry) {
+        const analysisPanel = document.getElementById('industry-analysis');
+        if (analysisPanel) analysisPanel.style.display = 'none';
+        return;
+    }
+    
+    const analysisPanel = document.getElementById('industry-analysis');
+    const analysisContent = document.getElementById('industry-analysis-content');
+    
+    if (!analysisPanel || !analysisContent) return;
+    
+    const analysis = getIndustryAnalysis(industry);
+    if (!analysis) return;
+    
+    const analysisHTML = `
+        <div class="pros-cons-grid">
+            <div class="pros-section">
+                <h5>✅ Industry Advantages</h5>
+                <ul>
+                    ${analysis.advantages.map(adv => `<li>${adv}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="cons-section">
+                <h5>⚠️ Industry Challenges</h5>
+                <ul>
+                    ${analysis.challenges.map(challenge => `<li>${challenge}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="impact-summary">
+            <strong>📊 Industry Complexity Factors</strong>
+            <div class="impact-metrics">
+                <div class="impact-metric">
+                    <span class="value">${analysis.regulatoryComplexity}/10</span>
+                    <span class="label">Regulatory</span>
+                </div>
+                <div class="impact-metric">
+                    <span class="value">${analysis.securityRequirements}/10</span>
+                    <span class="label">Security</span>
+                </div>
+                <div class="impact-metric">
+                    <span class="value">${analysis.dataComplexity}/10</span>
+                    <span class="label">Data</span>
+                </div>
+                <div class="impact-metric">
+                    <span class="value">+${analysis.costPremium}%</span>
+                    <span class="label">Cost Premium</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="uk-considerations">
+            <h6>🇬🇧 Key UK Regulations & Standards</h6>
+            <ul>
+                ${analysis.keyRegulations.map(reg => `<li><strong>${reg.name}:</strong> ${reg.description}</li>`).join('')}
+            </ul>
+        </div>
+        
+        <div class="recommendations">
+            <h6>💡 Industry-Specific Recommendations</h6>
+            <ul>
+                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+    
+    analysisContent.innerHTML = analysisHTML;
+    analysisPanel.style.display = 'block';
+}
+
+/**
+ * Get industry-specific analysis data
+ * @param {string} industry - Selected industry
+ * @returns {Object} Industry analysis data
+ */
+function getIndustryAnalysis(industry) {
+    const industryData = {
+        'nhs': {
+            advantages: [
+                'Established digital frameworks (NHS Digital Standards)',
+                'Strong focus on patient data protection and clinical governance',
+                'Access to NHS Digital procurement frameworks',
+                'Clear compliance pathways with DCB standards',
+                'Government support for healthcare digitisation'
+            ],
+            challenges: [
+                'Complex clinical risk management requirements (DCB0129)',
+                'Stringent business continuity requirements (DCB0160)',
+                'Multiple stakeholder approval processes',
+                'Integration with legacy NHS systems',
+                'Long procurement cycles and approval processes'
+            ],
+            regulatoryComplexity: 10,
+            securityRequirements: 10,
+            dataComplexity: 9,
+            costPremium: 40,
+            keyRegulations: [
+                { name: 'DCB0129', description: 'Clinical Risk Management System' },
+                { name: 'DCB0160', description: 'Business Continuity Planning' },
+                { name: 'DSPT', description: 'Data Security and Protection Toolkit' },
+                { name: 'IG Toolkit', description: 'Information Governance requirements' }
+            ],
+            recommendations: [
+                'Engage NHS Digital early in the planning process',
+                'Plan for comprehensive clinical risk assessments',
+                'Ensure SNOMED CT and NHS data standards compliance',
+                'Budget for extended testing and validation periods',
+                'Consider NHS Digital procurement frameworks (G-Cloud Health)'
+            ]
+        },
+        'finance': {
+            advantages: [
+                'Well-established regulatory frameworks (FCA/PRA)',
+                'Strong cybersecurity culture and investment',
+                'Advanced data analytics and reporting capabilities',
+                'Access to fintech innovation ecosystems',
+                'Clear compliance and audit processes'
+            ],
+            challenges: [
+                'Strict PCI DSS compliance for payment processing',
+                'Complex Senior Managers & Certification Regime (SM&CR)',
+                'High security and resilience requirements',
+                'Consumer Duty compliance considerations',
+                'Regulatory reporting and operational resilience rules'
+            ],
+            regulatoryComplexity: 9,
+            securityRequirements: 10,
+            dataComplexity: 8,
+            costPremium: 35,
+            keyRegulations: [
+                { name: 'FCA Rules', description: 'Financial Conduct Authority regulations' },
+                { name: 'PRA Requirements', description: 'Prudential Regulation Authority' },
+                { name: 'PCI DSS', description: 'Payment Card Industry Data Security Standard' },
+                { name: 'SM&CR', description: 'Senior Managers & Certification Regime' }
+            ],
+            recommendations: [
+                'Implement robust PCI DSS compliance from design phase',
+                'Plan for comprehensive operational resilience testing',
+                'Ensure Consumer Duty considerations in customer-facing systems',
+                'Budget for regular penetration testing and security audits',
+                'Consider FCA regulatory sandbox for innovative solutions'
+            ]
+        },
+        'government': {
+            advantages: [
+                'Clear digital standards (GDS Service Standard)',
+                'Government Digital Service design system available',
+                'G-Cloud procurement framework access',
+                'Digital by Default policy support',
+                'Established accessibility and inclusion standards'
+            ],
+            challenges: [
+                'Complex approval processes and governance',
+                'Government security classifications and clearances',
+                'Accessibility compliance (WCAG 2.1 AA minimum)',
+                'Long procurement cycles and budget constraints',
+                'Integration with legacy government systems'
+            ],
+            regulatoryComplexity: 8,
+            securityRequirements: 9,
+            dataComplexity: 7,
+            costPremium: 25,
+            keyRegulations: [
+                { name: 'GDS Standards', description: '14-point government service design standard' },
+                { name: 'Digital by Default', description: 'Government digital strategy requirements' },
+                { name: 'WCAG 2.1 AA', description: 'Web accessibility guidelines' },
+                { name: 'Security Classifications', description: 'OFFICIAL, SECRET, TOP SECRET' }
+            ],
+            recommendations: [
+                'Follow GDS service assessment process from start',
+                'Use Government Design System components',
+                'Plan for multiple user research and accessibility testing cycles',
+                'Ensure civil service approval at key design stages',
+                'Consider G-Cloud listing for wider government use'
+            ]
+        },
+        'manufacturing': {
+            advantages: [
+                'Growing government support (Made Smarter programme)',
+                'Industry 4.0 transformation opportunities',
+                'Strong focus on operational efficiency and cost reduction',
+                'Established health and safety frameworks',
+                'Supply chain digitisation benefits'
+            ],
+            challenges: [
+                'Integration with legacy industrial control systems',
+                'IoT security standards compliance (ETSI EN 303 645)',
+                'Skills shortage in digital manufacturing technologies',
+                'Complex supply chain data integration',
+                'Operational technology (OT) security considerations'
+            ],
+            regulatoryComplexity: 6,
+            securityRequirements: 8,
+            dataComplexity: 7,
+            costPremium: 20,
+            keyRegulations: [
+                { name: 'Made Smarter', description: 'Government industrial digitisation programme' },
+                { name: 'ETSI EN 303 645', description: 'IoT security standards' },
+                { name: 'Health & Safety', description: 'HSE digital systems requirements' },
+                { name: 'Supply Chain Security', description: 'Import/export digital compliance' }
+            ],
+            recommendations: [
+                'Leverage Made Smarter programme funding and support',
+                'Plan for comprehensive OT/IT security integration',
+                'Ensure IoT devices meet UK security standards',
+                'Consider digital twin technologies for operational efficiency',
+                'Implement supply chain visibility and traceability systems'
+            ]
+        },
+        'retail': {
+            advantages: [
+                'Consumer-focused digital innovation opportunities',
+                'E-commerce and omnichannel capabilities',
+                'Customer data analytics for personalisation',
+                'Agile development and rapid iteration possible',
+                'Strong consumer protection framework'
+            ],
+            challenges: [
+                'PCI DSS compliance for payment processing',
+                'Consumer rights and data protection (UK GDPR)',
+                'Competitive pressure for rapid feature delivery',
+                'Seasonal traffic spikes and scalability requirements',
+                'Integration with multiple payment and logistics providers'
+            ],
+            regulatoryComplexity: 5,
+            securityRequirements: 7,
+            dataComplexity: 6,
+            costPremium: 10,
+            keyRegulations: [
+                { name: 'UK GDPR', description: 'Consumer data protection requirements' },
+                { name: 'PCI DSS', description: 'Payment security for card transactions' },
+                { name: 'Consumer Rights', description: 'Distance selling and digital rights' },
+                { name: 'Accessibility', description: 'Web accessibility for customer-facing systems' }
+            ],
+            recommendations: [
+                'Implement privacy by design for customer data',
+                'Plan for Black Friday/Christmas traffic scalability',
+                'Ensure mobile-first responsive design',
+                'Consider headless commerce for omnichannel flexibility',
+                'Implement robust fraud detection and prevention'
+            ]
+        },
+        'education': {
+            advantages: [
+                'Strong focus on accessibility and inclusion',
+                'Government support for education technology',
+                'Clear safeguarding and child protection frameworks',
+                'Data for Children initiative alignment',
+                'Established procurement frameworks (CCS, regional consortiums)'
+            ],
+            challenges: [
+                'Strict child data protection requirements',
+                'Complex safeguarding and filtering requirements',
+                'Budget constraints and procurement complexities',
+                'Integration with established education systems (MIS)',
+                'Teacher training and change management requirements'
+            ],
+            regulatoryComplexity: 7,
+            securityRequirements: 8,
+            dataComplexity: 6,
+            costPremium: 15,
+            keyRegulations: [
+                { name: 'UK GDPR (Children)', description: 'Enhanced protection for under-18s data' },
+                { name: 'Safeguarding', description: 'Child protection and online safety' },
+                { name: 'DfE Standards', description: 'Department for Education digital standards' },
+                { name: 'Accessibility', description: 'Inclusive design for diverse learning needs' }
+            ],
+            recommendations: [
+                'Implement enhanced consent mechanisms for child data',
+                'Plan for comprehensive safeguarding and content filtering',
+                'Ensure SEND accessibility from design phase',
+                'Consider integration with popular MIS systems',
+                'Budget for extensive teacher training and support'
+            ]
+        },
+        'charity': {
+            advantages: [
+                'Flexible regulatory environment for innovation',
+                'Access to technology grants and discounted services',
+                'Strong mission-driven user engagement',
+                'Collaborative sector with shared resources',
+                'Tax advantages for qualifying digital investments'
+            ],
+            challenges: [
+                'Limited budgets and resource constraints',
+                'Volunteer workforce technology training needs',
+                'Dependency on grants and fundraising for projects',
+                'Diverse stakeholder needs and requirements',
+                'Charity Commission compliance and reporting'
+            ],
+            regulatoryComplexity: 3,
+            securityRequirements: 5,
+            dataComplexity: 4,
+            costPremium: -20,
+            keyRegulations: [
+                { name: 'Charity Commission', description: 'Charity governance and transparency' },
+                { name: 'UK GDPR', description: 'Donor and beneficiary data protection' },
+                { name: 'Fundraising Standards', description: 'Fundraising Regulator compliance' },
+                { name: 'Gift Aid', description: 'Digital systems for tax-efficient giving' }
+            ],
+            recommendations: [
+                'Leverage Microsoft/Google nonprofit programmes for cost savings',
+                'Plan for volunteer-friendly interfaces and training',
+                'Implement donor data protection and consent management',
+                'Consider shared services with other charities',
+                'Focus on mobile-first design for field workers'
+            ]
+        }
+    };
+    
+    return industryData[industry] || null;
+}
+
+/**
  * Move to next scope step with validation
  */
 function nextScopeStep() {
@@ -179,22 +1122,33 @@ function nextScopeStep() {
         return; // Don't proceed if validation fails
     }
 
-    if (currentScopeStep < 4) {
+    if (currentScopeStep < totalSteps) {
+        // Mark current step as completed
+        markStepCompleted(currentScopeStep);
+        
         // Hide current step
         document.getElementById(`scope-step-${currentScopeStep}`).classList.remove('active');
         
         // Show next step
         currentScopeStep++;
-        document.getElementById(`scope-step-${currentScopeStep}`).classList.add('active');
+        const nextStepElement = document.getElementById(`scope-step-${currentScopeStep}`);
+        if (nextStepElement) {
+            nextStepElement.classList.add('active');
+        }
         
-        // Update progress
+        // Update progress and journey visualization
         updateScopeProgress();
+        updateJourneyVisualization();
         
         // Handle buttons
         document.getElementById('prevBtn').style.display = 'block';
-        if (currentScopeStep === 4) {
-            generateUKScopeResults();
+        
+        if (currentScopeStep === totalSteps) {
+            generateComprehensiveResults();
             document.getElementById('nextBtn').style.display = 'none';
+        } else {
+            const nextBtn = document.getElementById('nextBtn');
+            nextBtn.textContent = currentScopeStep === totalSteps - 1 ? 'Generate Results →' : 'Next Step →';
         }
     }
 }
@@ -207,79 +1161,402 @@ function previousScopeStep() {
         // Hide current step
         document.getElementById(`scope-step-${currentScopeStep}`).classList.remove('active');
         
+        // Mark previous step as active again
+        markStepActive(currentScopeStep - 1);
+        
         // Show previous step
         currentScopeStep--;
-        document.getElementById(`scope-step-${currentScopeStep}`).classList.add('active');
+        const prevStepElement = document.getElementById(`scope-step-${currentScopeStep}`);
+        if (prevStepElement) {
+            prevStepElement.classList.add('active');
+        }
         
-        // Update progress
+        // Update progress and journey visualization
         updateScopeProgress();
+        updateJourneyVisualization();
         
         // Handle buttons
         if (currentScopeStep === 1) {
             document.getElementById('prevBtn').style.display = 'none';
         }
-        document.getElementById('nextBtn').style.display = 'block';
-        document.getElementById('nextBtn').textContent = 'Next →';
+        
+        const nextBtn = document.getElementById('nextBtn');
+        nextBtn.style.display = 'block';
+        nextBtn.textContent = currentScopeStep === totalSteps - 1 ? 'Generate Results →' : 'Next Step →';
     }
 }
 
 /**
- * Update progress bar
+ * Update progress bar and text
  */
 function updateScopeProgress() {
-    const progress = (currentScopeStep / 4) * 100;
+    const progress = (currentScopeStep / totalSteps) * 100;
     const progressFill = document.getElementById('scopeProgress');
+    const progressText = document.getElementById('progressText');
+    
     if (progressFill) {
         progressFill.style.width = progress + '%';
     }
+    
+    if (progressText) {
+        const stepTitle = stepTitles[currentScopeStep] || 'Unknown Step';
+        progressText.textContent = `Step ${currentScopeStep} of ${totalSteps}: ${stepTitle}`;
+    }
 }
 
 /**
- * Generate UK-specific scope results with realistic scoring
+ * Update journey visualization
  */
-function generateUKScopeResults() {
-    // Collect form data
+function updateJourneyVisualization() {
+    const journeySteps = document.querySelectorAll('.journey-step');
+    
+    journeySteps.forEach((step, index) => {
+        const stepNumber = index + 1;
+        step.classList.remove('active', 'completed');
+        
+        if (stepNumber < currentScopeStep) {
+            step.classList.add('completed');
+        } else if (stepNumber === currentScopeStep) {
+            step.classList.add('active');
+        }
+    });
+}
+
+/**
+ * Mark step as completed
+ */
+function markStepCompleted(stepNumber) {
+    const journeyStep = document.querySelector(`[data-step="${stepNumber}"]`);
+    if (journeyStep) {
+        journeyStep.classList.remove('active');
+        journeyStep.classList.add('completed');
+    }
+}
+
+/**
+ * Mark step as active
+ */
+function markStepActive(stepNumber) {
+    const journeyStep = document.querySelector(`[data-step="${stepNumber}"]`);
+    if (journeyStep) {
+        journeyStep.classList.remove('completed');
+        journeyStep.classList.add('active');
+    }
+}
+
+/**
+ * Generate comprehensive UK results after completing all steps
+ */
+function generateComprehensiveResults() {
+    // Collect all form data from the journey
     scopeData.company = document.getElementById('companyName').value;
     scopeData.industry = document.getElementById('industry').value;
     scopeData.location = document.getElementById('location').value;
-    scopeData.timeline = document.getElementById('timeline').value;
-    scopeData.budget = document.getElementById('budget').value;
+    scopeData.annualRevenue = document.getElementById('annual-revenue').value;
+    scopeData.itBudget = document.getElementById('it-budget').value;
+    scopeData.dataTransfer = document.getElementById('data-transfer').value;
     
-    // Collect pain points
-    scopeData.painPoints = [];
+    // Collect selected technologies
+    scopeData.currentTech = [];
+    document.querySelectorAll('#scope-step-2 input[type="checkbox"]:checked').forEach(cb => {
+        scopeData.currentTech.push(cb.value);
+    });
+    
+    // Collect data types
+    scopeData.dataTypes = [];
     document.querySelectorAll('#scope-step-3 input[type="checkbox"]:checked').forEach(cb => {
-        scopeData.painPoints.push(cb.value);
+        scopeData.dataTypes.push(cb.value);
+    });
+    
+    // Collect sovereignty requirements
+    scopeData.sovereigntyRequirements = [];
+    document.querySelectorAll('#scope-step-3 input[type="checkbox"][id^="sov"]:checked').forEach(cb => {
+        scopeData.sovereigntyRequirements.push(cb.value);
     });
 
-    // UK-specific calculation with realistic scoring
-    let complexity = calculateComplexityScore();
-    let { costMultiplier, timeMultiplier } = calculateMultipliers();
+    // Calculate comprehensive assessment
+    const assessment = calculateComprehensiveAssessment();
     
-    // Calculate estimates in GBP
-    const baseHours = Math.max(300, complexity * 10);
+    // Generate detailed recommendations
+    const recommendations = generateDetailedRecommendations(assessment);
+    
+    // Display comprehensive results
+    displayComprehensiveResults(assessment, recommendations);
+}
+
+/**
+ * Calculate comprehensive assessment based on all collected data
+ */
+function calculateComprehensiveAssessment() {
+    let complexity = 40; // Base complexity for UK projects
+    let riskScore = 0;
+    let complianceScore = 0;
+    let costMultiplier = 1;
+    
+    // Industry complexity
+    const industryData = getIndustryAnalysis(scopeData.industry);
+    if (industryData) {
+        complexity += industryData.regulatoryComplexity;
+        riskScore += industryData.securityRequirements;
+        complianceScore += industryData.dataComplexity;
+        costMultiplier += (industryData.costPremium / 100);
+    }
+    
+    // Size complexity
+    const sizeData = getDecisionAnalysis('size', scopeData.size);
+    if (sizeData) {
+        complexity += sizeData.complexity;
+        riskScore += (sizeData.complexity / 2);
+    }
+    
+    // Challenge complexity
+    const challengeData = getDecisionAnalysis('challenge', scopeData.challenge);
+    if (challengeData) {
+        complexity += challengeData.complexity;
+        riskScore += (challengeData.complexity / 1.5);
+    }
+    
+    // Data complexity factors
+    const sensitiveDataTypes = ['health-records', 'payment-card', 'government-data'];
+    const hasSensitiveData = scopeData.dataTypes?.some(type => sensitiveDataTypes.includes(type));
+    if (hasSensitiveData) {
+        complexity += 15;
+        riskScore += 20;
+        complianceScore += 25;
+        costMultiplier += 0.2;
+    }
+    
+    // International data transfer complexity
+    if (scopeData.dataTransfer === 'global' || scopeData.dataTransfer === 'us-canada') {
+        complexity += 10;
+        complianceScore += 15;
+    }
+    
+    // Location cost adjustment
+    const locationMultipliers = {
+        'london': 1.3,
+        'southeast': 1.1,
+        'scotland': 0.95,
+        'wales': 0.9,
+        'ni': 0.85
+    };
+    costMultiplier *= locationMultipliers[scopeData.location] || 1.0;
+    
+    // Calculate estimates
+    const baseHours = Math.max(400, complexity * 12);
     const dailyRate = getDailyRate();
     const estimatedDays = Math.round(baseHours / 8);
     const netCost = estimatedDays * dailyRate * costMultiplier;
-    const vatAmount = netCost * 0.2; // 20% VAT
+    const vatAmount = netCost * 0.2;
     const totalCost = netCost + vatAmount;
+    const timelineWeeks = Math.max(16, Math.round(baseHours / 40));
+    const confidence = Math.max(60, 95 - Math.round(complexity / 4));
     
-    const timelineWeeks = Math.max(12, Math.round(baseHours / 40));
-    const confidence = Math.max(65, 100 - Math.round(complexity / 3));
-
-    // Generate UK-specific recommendations
-    const recommendations = generateRecommendations(complexity);
-
-    // Display results
-    displayScopeResults({
-        totalCost,
+    return {
+        complexity: Math.min(complexity, 100),
+        riskScore: Math.min(riskScore, 100),
+        complianceScore: Math.min(complianceScore, 100),
         netCost,
         vatAmount,
+        totalCost,
         timelineWeeks,
-        complexity,
-        confidence,
         estimatedDays,
-        recommendations
-    });
+        confidence,
+        costMultiplier
+    };
+}
+
+/**
+ * Generate detailed recommendations based on assessment
+ */
+function generateDetailedRecommendations(assessment) {
+    const recommendations = {
+        immediate: [],
+        shortTerm: [],
+        longTerm: [],
+        ukSpecific: [],
+        riskMitigation: []
+    };
+    
+    // Industry-specific recommendations
+    if (scopeData.industry === 'nhs') {
+        recommendations.immediate.push('Engage NHS Digital early for DCB standards compliance');
+        recommendations.ukSpecific.push('Ensure SNOMED CT and NHS data standards alignment');
+    } else if (scopeData.industry === 'finance') {
+        recommendations.immediate.push('Plan for PCI DSS and FCA compliance requirements');
+        recommendations.ukSpecific.push('Consider Consumer Duty implications for customer-facing systems');
+    } else if (scopeData.industry === 'government') {
+        recommendations.immediate.push('Align with GDS service standards from project inception');
+        recommendations.ukSpecific.push('Plan for G-Cloud marketplace listing if applicable');
+    }
+    
+    // Challenge-specific recommendations
+    if (scopeData.challenge === 'legacy-systems') {
+        recommendations.immediate.push('Conduct comprehensive legacy system audit and data mapping');
+        recommendations.shortTerm.push('Plan phased modernisation approach to reduce business risk');
+    } else if (scopeData.challenge === 'compliance-gaps') {
+        recommendations.immediate.push('Prioritise UK GDPR compliance gap analysis');
+        recommendations.shortTerm.push('Implement automated compliance monitoring tools');
+    }
+    
+    // Data sovereignty recommendations
+    if (scopeData.sovereigntyRequirements?.includes('uk-residency')) {
+        recommendations.ukSpecific.push('Ensure all data processing occurs within UK borders');
+        recommendations.ukSpecific.push('Select UK-based cloud providers with appropriate certifications');
+    }
+    
+    // Risk mitigation based on assessment scores
+    if (assessment.riskScore > 70) {
+        recommendations.riskMitigation.push('Implement comprehensive risk management framework');
+        recommendations.riskMitigation.push('Plan for extensive testing and validation phases');
+    }
+    
+    if (assessment.complianceScore > 60) {
+        recommendations.riskMitigation.push('Engage legal and compliance specialists early');
+        recommendations.riskMitigation.push('Budget for regular compliance audits and assessments');
+    }
+    
+    // General UK recommendations
+    recommendations.ukSpecific.push('Factor in London weighting if team based in capital');
+    recommendations.ukSpecific.push('Consider Brexit implications for international data flows');
+    recommendations.ukSpecific.push('Plan for potential IR35 implications for contractor engagement');
+    
+    return recommendations;
+}
+
+/**
+ * Display comprehensive results
+ */
+function displayComprehensiveResults(assessment, recommendations) {
+    const resultsHTML = `
+        <div class="comprehensive-results">
+            <div class="results-header">
+                <h2>🎯 Your Comprehensive UK IT Strategy</h2>
+                <p>Based on your complete discovery journey, here's your tailored roadmap for success in the UK market.</p>
+            </div>
+            
+            <div class="executive-summary">
+                <div class="score-card">
+                    <span class="score-number">£${(assessment.totalCost/1000).toFixed(0)}K</span>
+                    <span class="score-label">Total Investment (inc. VAT)</span>
+                </div>
+                
+                <div class="summary-metrics">
+                    <div class="metric">
+                        <span class="metric-value">${assessment.timelineWeeks}</span>
+                        <span class="metric-label">Weeks</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">${assessment.complexity}/100</span>
+                        <span class="metric-label">Complexity</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">${assessment.confidence}%</span>
+                        <span class="metric-label">Confidence</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">${assessment.riskScore}/100</span>
+                        <span class="metric-label">Risk Score</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detailed-breakdown">
+                <h3>💰 Financial Breakdown</h3>
+                <div class="financial-grid">
+                    <div class="financial-item">
+                        <strong>Net Investment:</strong> £${(assessment.netCost/1000).toFixed(0)}K
+                    </div>
+                    <div class="financial-item">
+                        <strong>VAT (20%):</strong> £${(assessment.vatAmount/1000).toFixed(0)}K
+                    </div>
+                    <div class="financial-item">
+                        <strong>Consultant Days:</strong> ${assessment.estimatedDays}
+                    </div>
+                    <div class="financial-item">
+                        <strong>Location Adjustment:</strong> ${((assessment.costMultiplier - 1) * 100).toFixed(0)}%
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendations-section">
+                <h3>🚀 Strategic Recommendations</h3>
+                
+                <div class="recommendation-category">
+                    <h4>🟢 Immediate Actions (Next 30 days)</h4>
+                    <ul>
+                        ${recommendations.immediate.map(rec => `<li>${rec}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="recommendation-category">
+                    <h4>🟡 Short-term Goals (3-6 months)</h4>
+                    <ul>
+                        ${recommendations.shortTerm.map(rec => `<li>${rec}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="recommendation-category">
+                    <h4>🇬🇧 UK-Specific Considerations</h4>
+                    <ul>
+                        ${recommendations.ukSpecific.map(rec => `<li>${rec}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="recommendation-category">
+                    <h4>⚠️ Risk Mitigation</h4>
+                    <ul>
+                        ${recommendations.riskMitigation.map(rec => `<li>${rec}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>📋 Recommended Next Steps</h3>
+                <div class="next-steps-grid">
+                    <div class="next-step">
+                        <strong>1. Discovery Workshop</strong>
+                        <p>Schedule a detailed discovery session (4-6 hours) to validate requirements and refine approach.</p>
+                    </div>
+                    <div class="next-step">
+                        <strong>2. Compliance Review</strong>
+                        <p>Conduct UK regulatory compliance assessment specific to your industry and data types.</p>
+                    </div>
+                    <div class="next-step">
+                        <strong>3. Technical Proof of Concept</strong>
+                        <p>Develop small-scale proof of concept to validate technical approach and integration.</p>
+                    </div>
+                    <div class="next-step">
+                        <strong>4. Detailed Project Plan</strong>
+                        <p>Create comprehensive project plan with timelines, resources, and risk mitigation strategies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="uk-summary">
+                <h3>🇬🇧 UK Market Summary</h3>
+                <p>Your project aligns well with current UK digital transformation trends. Key success factors include:</p>
+                <ul>
+                    <li>Strong focus on data sovereignty and UK GDPR compliance</li>
+                    <li>Alignment with UK government digital-first policies</li>
+                    <li>Consideration of Brexit implications for international data flows</li>
+                    <li>Integration with UK-specific industry standards and frameworks</li>
+                    <li>Cost optimisation considering UK regional variations</li>
+                </ul>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="exportComprehensiveResults()">📄 Export Full Report</button>
+                <button class="btn btn-success" onclick="scheduleDiscoveryWorkshop()">📅 Schedule Discovery Workshop</button>
+                <button class="btn btn-secondary" onclick="resetComprehensiveJourney()">🔄 Start New Assessment</button>
+            </div>
+        </div>
+    `;
+    
+    const resultsElement = document.getElementById('scopeResults');
+    if (resultsElement) {
+        resultsElement.innerHTML = resultsHTML;
+    }
 }
 
 /**
@@ -1134,16 +2411,30 @@ function resetUKROI() {
 }
 
 /**
- * Reset scope tool
+ * Reset comprehensive journey
  */
-function resetScope() {
+function resetComprehensiveJourney() {
     currentScopeStep = 1;
     scopeData = {};
     
     // Reset all steps
-    document.querySelectorAll('.scope-step').forEach(step => step.classList.remove('active'));
+    for (let i = 1; i <= totalSteps; i++) {
+        const stepElement = document.getElementById(`scope-step-${i}`);
+        if (stepElement) {
+            stepElement.classList.remove('active');
+        }
+    }
+    
+    // Show first step
     const firstStep = document.getElementById('scope-step-1');
     if (firstStep) firstStep.classList.add('active');
+    
+    // Reset journey visualization
+    document.querySelectorAll('.journey-step').forEach(step => {
+        step.classList.remove('active', 'completed');
+    });
+    const firstJourneyStep = document.querySelector('[data-step="1"]');
+    if (firstJourneyStep) firstJourneyStep.classList.add('active');
     
     // Reset selections
     document.querySelectorAll('.scope-option').forEach(opt => {
@@ -1152,14 +2443,25 @@ function resetScope() {
     });
     
     // Reset form fields
-    const fields = ['companyName', 'industry', 'location', 'timeline', 'budget'];
-    fields.forEach(field => {
+    const textFields = ['companyName', 'annual-revenue', 'it-budget', 'data-transfer'];
+    textFields.forEach(field => {
+        const element = document.getElementById(field);
+        if (element) element.value = '';
+    });
+    
+    const selectFields = ['industry', 'location'];
+    selectFields.forEach(field => {
         const element = document.getElementById(field);
         if (element) element.value = '';
     });
     
     // Reset checkboxes
-    document.querySelectorAll('#scope-step-3 input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    
+    // Hide analysis panels
+    document.querySelectorAll('.decision-analysis').forEach(panel => {
+        panel.style.display = 'none';
+    });
     
     // Reset buttons
     const prevBtn = document.getElementById('prevBtn');
@@ -1168,7 +2470,7 @@ function resetScope() {
     if (prevBtn) prevBtn.style.display = 'none';
     if (nextBtn) {
         nextBtn.style.display = 'block';
-        nextBtn.textContent = 'Next →';
+        nextBtn.textContent = 'Next Step →';
     }
     
     // Clear errors
@@ -1176,6 +2478,45 @@ function resetScope() {
     
     // Reset progress
     updateScopeProgress();
+    updateJourneyVisualization();
+}
+
+/**
+ * Export comprehensive results
+ */
+function exportComprehensiveResults() {
+    const assessment = {
+        organisation: {
+            name: scopeData.company,
+            industry: scopeData.industry,
+            size: scopeData.size,
+            location: scopeData.location,
+            revenue: scopeData.annualRevenue,
+            itBudget: scopeData.itBudget
+        },
+        currentState: {
+            primaryChallenge: scopeData.challenge,
+            currentTech: scopeData.currentTech || [],
+            dataTypes: scopeData.dataTypes || [],
+            dataTransfer: scopeData.dataTransfer,
+            sovereigntyRequirements: scopeData.sovereigntyRequirements || []
+        },
+        results: document.getElementById('scopeResults')?.textContent || '',
+        timestamp: new Date().toISOString(),
+        currency: 'GBP',
+        country: 'UK',
+        frameworkVersion: '2.0',
+        assessmentType: 'Comprehensive Discovery Journey'
+    };
+    
+    downloadJSON(assessment, `uk-comprehensive-assessment-${scopeData.company || 'organisation'}-${Date.now()}.json`);
+}
+
+/**
+ * Schedule discovery workshop
+ */
+function scheduleDiscoveryWorkshop() {
+    alert(`📅 Discovery Workshop Scheduling\n\nA comprehensive discovery workshop has been recommended for ${scopeData.company}.\n\nThis would typically include:\n• Detailed requirements gathering (4-6 hours)\n• Stakeholder interviews and process mapping\n• Technical architecture review\n• UK compliance and regulatory analysis\n• Risk assessment and mitigation planning\n• Detailed project roadmap development\n\nOur team will contact you within 24 hours to schedule your workshop.`);
 }
 
 /**
@@ -1283,21 +2624,74 @@ function generateDefaultAssessment(type) {
  * Initialize the application
  */
 function initializeApp() {
-    console.log('✅ UK IT Discovery Framework loaded successfully!');
+    console.log('✅ UK IT Discovery Framework v2.0 loaded successfully!');
+    console.log('✅ Comprehensive 10-step discovery journey ready');
     console.log('✅ All UK-specific tools are functional');
     console.log('✅ GBP currency calculations ready');
     console.log('✅ UK compliance frameworks integrated');
-    console.log('✅ Accessibility improvements implemented');
-    console.log('✅ Form validation enabled');
+    console.log('✅ Enhanced accessibility and decision analysis');
+    console.log('✅ Real-time pros/cons analysis enabled');
     
-    // Initialize progress bar
+    // Initialize progress bar and journey
     updateScopeProgress();
+    updateJourneyVisualization();
     
     // Set up scroll listener for back to top button
     window.addEventListener('scroll', handleBackToTopVisibility);
     
-    // Initialize any other components
+    // Initialize form validation
     initializeFormValidation();
+    
+    // Set up journey step click handlers (optional - for navigation)
+    setupJourneyNavigation();
+}
+
+/**
+ * Setup journey navigation (optional enhancement)
+ */
+function setupJourneyNavigation() {
+    document.querySelectorAll('.journey-step').forEach((step, index) => {
+        step.addEventListener('click', function() {
+            const stepNumber = index + 1;
+            // Only allow navigation to completed steps or the next step
+            if (stepNumber <= currentScopeStep) {
+                navigateToStep(stepNumber);
+            }
+        });
+    });
+}
+
+/**
+ * Navigate directly to a specific step
+ */
+function navigateToStep(targetStep) {
+    if (targetStep < 1 || targetStep > totalSteps || targetStep > currentScopeStep) {
+        return;
+    }
+    
+    // Hide current step
+    document.getElementById(`scope-step-${currentScopeStep}`).classList.remove('active');
+    
+    // Show target step
+    currentScopeStep = targetStep;
+    document.getElementById(`scope-step-${currentScopeStep}`).classList.add('active');
+    
+    // Update progress and visualization
+    updateScopeProgress();
+    updateJourneyVisualization();
+    
+    // Update buttons
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    if (prevBtn) {
+        prevBtn.style.display = currentScopeStep === 1 ? 'none' : 'block';
+    }
+    
+    if (nextBtn) {
+        nextBtn.style.display = currentScopeStep === totalSteps ? 'none' : 'block';
+        nextBtn.textContent = currentScopeStep === totalSteps - 1 ? 'Generate Results →' : 'Next Step →';
+    }
 }
 
 /**
